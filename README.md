@@ -180,7 +180,11 @@ After installation and interface assignment, pfSense software has the following 
 
 
 
+### Enable SSH on pfSense:
 
+Navigate to `System` → `Advanced` → `Admin Access` - section `Secure Shell`:
+- Secure Shell: [✔] ServerEnable Secure Shell
+- click `Save`
 
 
 
