@@ -25,7 +25,7 @@ If you are forwarding SSH:
 
 
 
-### Example Use Case:
+### Example-1 Use Case:
 
 Navigate to `Firewall` > `NAT`, on the `Port Forward` tab - click `Add`:
 - Interface: `WAN`
@@ -62,4 +62,31 @@ Navigate to `Firewall` > `NAT`, on the `Port Forward` tab - click `Add`:
 ssh -p 22 user_name@<pfSense-WAN-IP>
 
 ssh -p 22 root@10.1.1.128
+```
+
+
+
+### Example-2 Use Case:
+
+Navigate to `Firewall` > `NAT`, on the `Port Forward` tab - click `Add`:
+- Interface: `WAN`
+- Address Family: `IPv4`
+- Protocol:	`TCP`
+
+- Source: 
+    
+- Destination:	`WAN address`
+- Destination Port Range: `HTTP`
+
+- Redirect target IP: **Single host** > `192.168.1.190`
+- Redirect target port: `HTTP`
+
+- Description: Allow internal web server
+
+
+
+#### Test:
+
+```
+http://10.1.1.128/
 ```
